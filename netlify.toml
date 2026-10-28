@@ -1,0 +1,8 @@
+# Static site: no build step. Netlify serves index.html from this folder.
+[build]
+  publish = "."
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
